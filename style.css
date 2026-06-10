@@ -70,6 +70,13 @@ body.fade-out .transition-overlay {
   100% { transform: scaleY(1); transform-origin: bottom; }
 }
 
+/* Global Image Reset */
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 /* Cinematic Noise Overlay */
 .noise {
   position: fixed;
