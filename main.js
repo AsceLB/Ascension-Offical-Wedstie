@@ -184,8 +184,6 @@ async function fetchLeadership() {
 fetchLeadership();
 
 // Smooth Page Transitions
-document.body.insertAdjacentHTML('afterbegin', '<div class="transition-overlay"></div>');
-
 document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');

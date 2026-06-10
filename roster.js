@@ -154,8 +154,6 @@ async function fetchAndRenderRoster() {
 fetchAndRenderRoster();
 
 // Smooth Page Transitions
-document.body.insertAdjacentHTML('afterbegin', '<div class="transition-overlay"></div>');
-
 function startHudClock(elementId) {
   const clockElement = document.getElementById(elementId);
   if (!clockElement) return;
