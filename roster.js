@@ -85,7 +85,19 @@ async function fetchAndRenderRoster() {
     spinner.style.display = 'none';
     
     if (!data) {
-      container.innerHTML = '<p style="text-align:center; color: var(--text-muted);">The roster is currently empty.</p>';
+      container.innerHTML = `
+        <div class="empty-roster-hud reveal-up visible">
+          <div class="hud-scanline"></div>
+          <div class="hud-content">
+            <h2 class="hud-title">SYSTEM STATUS: EMPTY</h2>
+            <p class="hud-desc">The Ascension roster database contains no active members at this time.</p>
+            <div class="hud-decor">
+              <span>// WAITING FOR DEPLOYMENT</span>
+              <span>[ 00 : 00 : 00 ]</span>
+            </div>
+          </div>
+        </div>
+      `;
       return;
     }
     
@@ -113,7 +125,19 @@ async function fetchAndRenderRoster() {
     });
     
     if (htmlContent === '') {
-      container.innerHTML = '<p style="text-align:center; color: var(--text-muted);">The roster is currently empty.</p>';
+      container.innerHTML = `
+        <div class="empty-roster-hud reveal-up visible">
+          <div class="hud-scanline"></div>
+          <div class="hud-content">
+            <h2 class="hud-title">SYSTEM STATUS: EMPTY</h2>
+            <p class="hud-desc">The Ascension roster database contains no active members at this time.</p>
+            <div class="hud-decor">
+              <span>// WAITING FOR DEPLOYMENT</span>
+              <span>[ 00 : 00 : 00 ]</span>
+            </div>
+          </div>
+        </div>
+      `;
     } else {
       container.innerHTML = htmlContent;
     }
