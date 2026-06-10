@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCENSION • ROSTER</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="roster-page">
+    <!-- Cinematic Noise -->
+    <div class="noise"></div>
+
+    <!-- Canvas for Particle Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" alt="Ascension Logo">
+          <span>ASCENSION • ROSTER</span>
+        </a>
+        <div class="nav-links">
+          <a href="/index.html" class="btn btn-outline" style="padding: 8px 24px; font-size: 1rem;">
+            <span>HOME</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Roster Content -->
+    <main class="roster-container">
+      <div class="roster-header reveal-up">
+        <h2 class="neon-text">TEAM TIERS</h2>
+      </div>
+
+      <div id="roster-tiers-container" class="roster-tiers-container">
+        <!-- Tiers will be injected here via JS -->
+      </div>
+      
+      <div id="loading-spinner" class="loading-spinner">
+        Loading Roster...
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content reveal-up">
+        <div class="footer-brand">
+          <h2>ASCENSION</h2>
+        </div>
+        <p class="copyright">© 2026 Ascension Clan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/roster.js"></script>
+  </body>
+</html>

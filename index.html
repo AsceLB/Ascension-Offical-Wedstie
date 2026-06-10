@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCENSION CLAN</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Cinematic Noise -->
+    <div class="noise"></div>
+
+    
+
+    <!-- Glowing Orb Tracking Mouse -->
+    <div id="glow-orb"></div>
+
+    <!-- Canvas for Particle Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" alt="Ascension Logo">
+          <span>ASCENSION</span>
+        </a>
+        <div class="nav-links">
+          <a href="/roster.html" data-text="Roster"><span>Roster</span></a>
+          <a href="#about" data-text="About"><span>About</span></a>
+          <a href="#leadership" data-text="Elites"><span>Elites</span></a>
+          <a href="#media" data-text="Media"><span>Media</span></a>
+          <a href="#join" class="nav-btn">JOIN US</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-logo-wrapper">
+          <img src="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" alt="Big Logo" class="hero-logo">
+        </div>
+        <div class="hero-title-wrapper">
+          <h1 class="hero-title" data-text="RISE ABOVE ALL">RISE ABOVE ALL</h1>
+        </div>
+        <p class="hero-subtitle">The Official Ascension Clan</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn">
+            <span style="padding-left: 0.1em;">DISCOVER</span>
+          </a>
+          <a href="https://ascension-leaderboard.vercel.app/" target="_blank" class="btn btn-outline">
+            <span>LEADERBOARD</span>
+          </a>
+        </div>
+        
+        <div class="scroll-indicator">
+          <span style="padding-left: 0.2em;">SCROLL</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section container">
+      <div class="section-header reveal-up">
+        <h2 data-text="WHO WE ARE">WHO WE ARE</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-up tilt-card" data-tilt>
+          <div class="card-content">
+            <div class="card-icon-wrapper">
+              <i data-lucide="sword" class="card-icon"></i>
+            </div>
+            <h3>Elite Combat</h3>
+            <p>We forge the strongest warriors. Ascend the ranks, dominate the battlefield, and claim your title among the elites.</p>
+          </div>
+        </div>
+        <div class="about-card reveal-up tilt-card" data-tilt style="transition-delay: 0.1s;">
+          <div class="card-content">
+            <div class="card-icon-wrapper">
+              <i data-lucide="shield" class="card-icon"></i>
+            </div>
+            <h3>Brotherhood</h3>
+            <p>More than just a clan. We are a family bound by loyalty, respect, and the relentless pursuit of victory.</p>
+          </div>
+        </div>
+        <div class="about-card reveal-up tilt-card" data-tilt style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <div class="card-icon-wrapper">
+              <i data-lucide="trophy" class="card-icon"></i>
+            </div>
+            <h3>Legacy</h3>
+            <p>Our names are etched in the leaderboards. We don't just play the game, we define how it is played.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Leadership Section -->
+    <section id="leadership" class="section container">
+      <div class="section-header reveal-up">
+        <h2 data-text="LEADERSHIP & HIGHER-UPS">LEADERSHIP & HIGHER-UPS</h2>
+        <div class="header-line"></div>
+      </div>
+      <div id="leadership-grid" class="leadership-grid">
+        <!-- Dynamic content will be injected by main.js -->
+      </div>
+    </section>
+
+    <!-- Media / Showcase Section -->
+    <section id="media" class="section container">
+      <div class="section-header reveal-up">
+        <h2 data-text="HIGHLIGHTS">HIGHLIGHTS</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="media-grid">
+        <div class="video-card reveal-up">
+          <div class="video-bg"></div>
+          <div class="play-btn">
+            <i data-lucide="play"></i>
+          </div>
+          <div class="video-info">
+            <h4>Ascension Montage V1</h4>
+            <p>The dawn of our elites.</p>
+          </div>
+        </div>
+        <div class="video-card reveal-up" style="transition-delay: 0.2s;">
+          <div class="video-bg"></div>
+          <div class="play-btn">
+            <i data-lucide="play"></i>
+          </div>
+          <div class="video-info">
+            <h4>Tournament Finals</h4>
+            <p>Absolute domination.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content reveal-up">
+        <div class="footer-brand">
+          <img src="https://i.postimg.cc/j5B1nLhX/Silver-Arrow-Emblem-with-Wings-removebg-preview.png" alt="Ascension Logo">
+          <h2>ASCENSION</h2>
+        </div>
+        <p class="copyright">© 2026 Ascension Clan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Use vanilla-tilt for 3D effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
