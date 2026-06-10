@@ -93,11 +93,12 @@ async function fetchAndRenderRoster() {
             <p class="hud-desc">The Ascension roster database contains no active members at this time.</p>
             <div class="hud-decor">
               <span>// WAITING FOR DEPLOYMENT</span>
-              <span>[ 00 : 00 : 00 ]</span>
+              <span id="hud-clock-1">[ 00 : 00 : 00 ]</span>
             </div>
           </div>
         </div>
       `;
+      startHudClock('hud-clock-1');
       return;
     }
     
@@ -133,11 +134,12 @@ async function fetchAndRenderRoster() {
             <p class="hud-desc">The Ascension roster database contains no active members at this time.</p>
             <div class="hud-decor">
               <span>// WAITING FOR DEPLOYMENT</span>
-              <span>[ 00 : 00 : 00 ]</span>
+              <span id="hud-clock-2">[ 00 : 00 : 00 ]</span>
             </div>
           </div>
         </div>
       `;
+      startHudClock('hud-clock-2');
     } else {
       container.innerHTML = htmlContent;
     }
@@ -152,6 +154,22 @@ fetchAndRenderRoster();
 
 // Smooth Page Transitions
 document.body.insertAdjacentHTML('afterbegin', '<div class="transition-overlay"></div>');
+
+function startHudClock(elementId) {
+  const clockElement = document.getElementById(elementId);
+  if (!clockElement) return;
+  
+  function updateTime() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+    clockElement.innerText = `[ ${h} : ${m} : ${s} ]`;
+  }
+  
+  updateTime(); // initial call
+  setInterval(updateTime, 1000);
+}
 
 document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener('click', (e) => {
