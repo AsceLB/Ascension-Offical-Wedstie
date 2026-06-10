@@ -110,7 +110,8 @@ async function fetchAndRenderRoster() {
         
         let membersHtml = members.map(member => `
           <div class="roster-member-card">
-            <span style="text-transform: capitalize;">${member}</span>
+            <span class="card-accent">//</span>
+            <span class="member-name" style="text-transform: capitalize;">${member}</span>
           </div>
         `).join('');
         

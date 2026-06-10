@@ -836,105 +836,77 @@ a {
 .roster-tiers-container {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding: 0 40px;
+  gap: 60px;
+  padding: 0 20px;
 }
 
 .tier-block {
-  position: relative;
-  background: linear-gradient(180deg, rgba(30, 30, 30, 0.4) 0%, rgba(10, 10, 10, 0.8) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  padding: 60px 40px;
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.tier-block::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.tier-block:hover {
-  border-top-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 255, 255, 0.02);
-  transform: translateY(-5px);
-  transition-duration: 0.2s;
+  margin-bottom: 20px;
 }
 
 .tier-title {
-  text-align: center;
+  text-align: left;
   font-family: var(--font-display);
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-top: -100px;
-  margin-bottom: 50px;
-  letter-spacing: 0.1em;
+  color: #fff;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  pointer-events: none;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  position: relative;
 }
 
-.tier-block:hover .tier-title {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition-duration: 0.2s;
+.tier-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
 }
 
 .tier-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  position: relative;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .roster-member-card {
-  position: relative;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 16px 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 20px;
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: #fff;
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  min-width: 180px;
-  text-align: center;
-  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(10px);
+  position: relative;
   overflow: hidden;
 }
 
-.roster-member-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -150%;
-  width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transform: skewX(-25deg);
-  transition: none;
+.card-accent {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .roster-member-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-left-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform: translateX(5px);
   transition-duration: 0.2s;
-  color: #fff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
-.roster-member-card:hover::before {
-  animation: shineSweep 0.6s ease-out forwards;
 }
 
 @keyframes shineSweep {
